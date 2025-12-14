@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Engineering course in the AI era",
   "scripts": {
-    "build": "reveal-md slides.md --static docs",
-    "serve": "reveal-md 001_mindset4ai-cording.md --watch",
-    "dev": "reveal-md 001_mindset4ai-cording.md --watch"
+    "build": "node build.js",
+    "build:mindset": "reveal-md slides.md --static docs/mindset",
+    "serve": "reveal-md slides.md --watch",
+    "dev": "reveal-md slides.md --watch"
   },
   "devDependencies": {
     "reveal-md": "^6.0.1"
