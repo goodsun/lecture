@@ -134,15 +134,17 @@ ${description}
   margin-bottom: 1em;
 }
 
-.reveal ol, .reveal dl, .reveal ul {
-  display: block;
-  text-align: left;
-  margin: 0 auto 1em auto;
-  width: 90%;
+.reveal .slides section ol, 
+.reveal .slides section dl, 
+.reveal .slides section ul {
+  display: block !important;
+  text-align: left !important;
+  margin: 0 auto 1em auto !important;
+  width: 90% !important;
 }
 
-.reveal ul {
-  margin-left: 0;
+.reveal .slides section ul {
+  margin-left: 0 !important;
 }
 
 .reveal strong {
