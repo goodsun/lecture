@@ -22,6 +22,38 @@ npm run serve  # 最初のスライドを表示
 npm run new-slide
 ```
 
+対話形式でスライド名、タイトル、説明を入力すると、以下が自動生成されます：
+- `slides/{スライド名}/` ディレクトリ
+- `README.md` (スライドの説明)
+- `slides.md` (Reveal.js用テンプレート)
+
+### スライド追加の手順
+1. **新しいスライドを作成**
+   ```bash
+   npm run new-slide
+   ```
+
+2. **スライド内容を編集**
+   ```bash
+   # 例: 002-advanced-topics を作成した場合
+   code slides/002-advanced-topics/slides.md
+   ```
+
+3. **ローカルで確認**
+   ```bash
+   npm run serve
+   # または特定のスライドを表示
+   reveal-md slides/002-advanced-topics/slides.md --watch
+   ```
+
+4. **ビルドとデプロイ**
+   ```bash
+   npm run build           # ビルド
+   git add .              # 変更をステージング
+   git commit -m "Add new slide: タイトル"
+   git push origin main   # GitHub Pagesにデプロイ
+   ```
+
 ### ビルド
 ```bash
 npm run build
