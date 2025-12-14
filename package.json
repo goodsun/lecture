@@ -4,9 +4,9 @@
   "description": "Engineering course in the AI era",
   "scripts": {
     "build": "node build.js",
-    "build:mindset": "reveal-md slides.md --static docs/mindset",
-    "serve": "reveal-md slides.md --watch",
-    "dev": "reveal-md slides.md --watch"
+    "serve": "reveal-md slides/001-ai-coding-mindset/slides.md --watch",
+    "dev": "reveal-md slides/001-ai-coding-mindset/slides.md --watch",
+    "new-slide": "node scripts/new-slide.js"
   },
   "devDependencies": {
     "reveal-md": "^6.0.1"
