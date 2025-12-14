@@ -53,6 +53,7 @@ ${description}
 title: ${title}
 theme: white
 highlightTheme: github
+css: custom.css
 revealOptions:
   transition: slide
   controls: true
@@ -61,39 +62,6 @@ revealOptions:
   center: true
   width: 1200
   height: 800
-css: |
-  .reveal h1 { font-size: 2.2em; line-height: 1.2; }
-  .reveal h2 { font-size: 1.8em; line-height: 1.3; }
-  .reveal h3 { font-size: 1.4em; line-height: 1.4; }
-  .reveal p, .reveal li { 
-    font-size: 0.9em; 
-    line-height: 1.6;
-    text-align: left;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .reveal .slides section {
-    text-align: left;
-    padding: 20px;
-  }
-  .reveal .slides section h1,
-  .reveal .slides section h2 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .reveal ul {
-    margin-left: 1em;
-  }
-  .reveal strong {
-    color: #e74c3c;
-    font-weight: bold;
-  }
-  .reveal code {
-    background: #f8f9fa;
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: #e74c3c;
-  }
 ---
 
 # ${title}
@@ -130,6 +98,59 @@ ${description}
 `;
   
   fs.writeFileSync(path.join(slideDir, 'slides.md'), slidesContent);
+  
+  // custom.css を作成
+  const customCss = `.reveal h1 { 
+  font-size: 2.2em; 
+  line-height: 1.2; 
+}
+
+.reveal h2 { 
+  font-size: 1.8em; 
+  line-height: 1.3; 
+}
+
+.reveal h3 { 
+  font-size: 1.4em; 
+  line-height: 1.4; 
+}
+
+.reveal p, .reveal li { 
+  font-size: 0.9em; 
+  line-height: 1.6;
+  text-align: left;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.reveal .slides section {
+  text-align: left;
+  padding: 20px;
+}
+
+.reveal .slides section h1,
+.reveal .slides section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.reveal ul {
+  margin-left: 1em;
+}
+
+.reveal strong {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.reveal code {
+  background: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #e74c3c;
+}`;
+
+  fs.writeFileSync(path.join(slideDir, 'custom.css'), customCss);
   
   console.log(`\n✅ 新しいスライド "${name}" を作成しました！`);
   console.log(`📁 ディレクトリ: ${slideDir}`);
