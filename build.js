@@ -163,7 +163,15 @@ fs.writeFileSync('docs/index.html', indexHtml);
 // 各スライドをビルド
 slides.forEach(slide => {
   console.log(`Building ${slide.name} (${slide.title})...`);
-  execSync(`reveal-md "${slide.file}" --static docs/${slide.name}`, { stdio: 'inherit' });
+  const slideDir = path.dirname(slide.file);
+  const slideFile = path.basename(slide.file);
+  const outputDir = path.resolve(`docs/${slide.name}`);
+  
+  // スライドディレクトリに移動してビルド
+  execSync(`cd "${slideDir}" && reveal-md "${slideFile}" --static "${outputDir}"`, { 
+    stdio: 'inherit',
+    shell: true
+  });
 });
 
 console.log(`Build completed! Generated ${slides.length} slides.`);
