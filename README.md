@@ -4,6 +4,7 @@ Engineering course in the AI era
 ## 📚 講座一覧
 
 - [001: AIコーディングの心構え](slides/001-ai-coding-mindset/) - コンテクスト・スコープ・粒度の3つの軸でAIを使いこなす
+  - [📄 元記事](slides/001-ai-coding-mindset/001_mindset4ai-cording.md) | [🎬 スライド](https://goodsun.github.io/lecture/001-ai-coding-mindset/)
 
 ## 🚀 スライド表示
 
@@ -67,7 +68,8 @@ npm run build
 │   └── 001-ai-coding-mindset/
 │       ├── README.md       # スライドの説明
 │       ├── slides.md       # Reveal.js用スライド
-│       └── 001_mindset4ai-cording.md  # 元のMarkdown
+│       ├── custom.css      # スライド用CSS
+│       └── 001_mindset4ai-cording.md  # 元記事（詳細版）
 ├── scripts/
 │   └── new-slide.js        # 新しいスライド作成スクリプト
 ├── build.js                # ビルドスクリプト
