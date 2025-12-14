@@ -134,8 +134,15 @@ ${description}
   margin-bottom: 1em;
 }
 
+.reveal ol, .reveal dl, .reveal ul {
+  display: block;
+  text-align: left;
+  margin: 0 auto 1em auto;
+  width: 90%;
+}
+
 .reveal ul {
-  margin-left: 1em;
+  margin-left: 0;
 }
 
 .reveal strong {
