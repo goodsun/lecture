@@ -32,16 +32,32 @@
   margin-bottom: 1em;
 }
 
-.reveal .slides section ol, 
-.reveal .slides section dl, 
-.reveal .slides section ul {
+/* Force override Reveal.js white theme list styles */
+.reveal .slides > section ol, 
+.reveal .slides > section dl, 
+.reveal .slides > section ul,
+.reveal .slides > section > ol, 
+.reveal .slides > section > dl, 
+.reveal .slides > section > ul {
   display: block !important;
   text-align: left !important;
-  margin: 0 auto 1em auto !important;
+  margin: 1em auto !important;
+  width: 90% !important;
+  max-width: none !important;
+}
+
+/* Additional specificity for nested lists */
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: block !important;
+  text-align: left !important;
+  margin: 1em auto !important;
   width: 90% !important;
 }
 
-.reveal .slides section ul {
+.reveal .slides section ul,
+.reveal .slides > section ul {
   margin-left: 0 !important;
 }
 
