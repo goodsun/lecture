@@ -1,0 +1,19 @@
+{
+  "name": "ai-coding-lecture",
+  "version": "1.0.0",
+  "description": "Engineering course in the AI era",
+  "scripts": {
+    "build": "reveal-md slides.md --static docs",
+    "serve": "reveal-md 001_mindset4ai-cording.md --watch",
+    "dev": "reveal-md 001_mindset4ai-cording.md --watch"
+  },
+  "devDependencies": {
+    "reveal-md": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodsun/lecture.git"
+  },
+  "author": "goodsun <goodsun0317@gmail.com>",
+  "license": "MIT"
+}
